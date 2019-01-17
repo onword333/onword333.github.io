@@ -1,0 +1,110 @@
+html {
+  font-family: "Pt Sans", sans-serif; }
+
+body {
+  margin: 0;
+  padding: 0;
+  background: url(../img/LeEuZIO69Ew.jpg) 0 0 repeat;
+  background-size: cover; }
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box; }
+
+a {
+  text-decoration: none;
+  color: #2c3e50; }
+
+.layout {
+  background-color: #fff;
+  background-color: rgba(255, 255, 255, 0.93);
+  padding: 4em 5em 3em;
+  margin: 3em 4em 0; }
+
+.grid::after {
+  content: '';
+  width: 100%;
+  display: inline-block; }
+
+.grid_item {
+  display: inline-block;
+  width: 24%;
+  padding: 0 .6rem;
+  vertical-align: top; }
+
+.title {
+  font: 5em "Pt Sans", sans-serif;
+  color: #2c3e50;
+  text-align: center; }
+
+.c-card {
+  display: block;
+  position: relative;
+  box-shadow: 0 1px 3px rgba(0, 17, 68, 0.38);
+  background-color: #fff;
+  border-radius: .2rem;
+  width: 100%;
+  padding: .5em 1rem 2.9em;
+  transition: all .2s ease-out;
+  margin-bottom: 1em; }
+  .c-card_l-link {
+    display: block; }
+  .c-card:hover {
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.28);
+    transition: all .2s ease-out; }
+  .c-card:hover .c-card_title h3 {
+    color: #0481ff;
+    transition: all .2s ease-out; }
+  .c-card:hover .c-card_icon {
+    fill: #0481ff;
+    transition: all .2s ease-out; }
+  .c-card_title h3 {
+    font-size: 1.9em;
+    font-weight: 700;
+    margin: 0;
+    display: inline-block;
+    transition: all .2s ease-out; }
+  .c-card_icon {
+    display: inline-block;
+    margin-right: .1em;
+    transition: all .2s ease-out; }
+  .c-card_tags {
+    position: absolute;
+    bottom: 1em;
+    left: 1em; }
+  .c-card_hash {
+    display: inline-block;
+    font-size: .9em;
+    line-height: 1;
+    padding: .1em .8rem .3em;
+    background-color: #d4eeff;
+    border-radius: 1rem;
+    color: #000; }
+
+@media (max-width: 1280px) and (min-width: 700px) {
+  .layout {
+    width: 100%;
+    padding: 3em .7em;
+    margin: 0;
+    background: none; } }
+
+@media (max-width: 1680px) {
+  .grid_item {
+    width: 33%; } }
+
+@media (max-width: 1050px) {
+  .layout {
+    width: 100%;
+    padding: .7em;
+    margin: 0;
+    background: none; }
+  .grid_item {
+    width: 49%; }
+  .c-card_title h3 {
+    font-size: 1.6em; } }
+
+@media (max-width: 700px) {
+  .grid_item {
+    display: block;
+    width: 100% !important; } }

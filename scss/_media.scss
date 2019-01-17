@@ -1,0 +1,42 @@
+@media (max-width: 1280px) and (min-width: 700px) {
+  .layout {
+    width: 100%;
+    padding: 3em .7em;
+    margin: 0;
+    background: none;
+  }
+}
+
+@media (max-width: 1680px) {
+
+  .grid_item {
+    width: 33%;
+  }
+}
+
+@media (max-width: 1050px) {
+  .layout {
+  width: 100%;
+  padding: .7em;
+    margin: 0;
+    background: none;
+}
+
+  .grid_item {
+    width: 49%;
+  }
+
+  .c-card_title h3 {
+    font-size: 1.6em;
+  }
+}
+@media (max-width: 700px) {
+
+  .grid_item {
+    display: block;
+    width: 100% !important;
+  }
+}
+
+
+
