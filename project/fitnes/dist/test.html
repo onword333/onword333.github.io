@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="styles/bootstrap.css">
+  <link rel="stylesheet" type="text/css" href="styles/main.css">
+  <script src='scripts/jquery.min.js'></script>
+  <title>Document</title>
+  
+  <style>
+    .header {
+      position: relative;
+    }
+
+    .header__content {
+      position: relative;
+      z-index: 100;
+      
+    }
+
+    .slider {
+      position: absolute;
+      top: 0px;
+      z-index: 30;
+      width: 100%;
+    }
+
+    .overley::before {
+      position: absolute;
+      content: '';
+      display: block;
+      z-index: 50;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.527);
+    }
+
+
+
+    .slider__item {
+      /* display: none; */
+      width: 100%;
+      transition: 3s;
+      opacity: 0;
+    }
+
+
+  </style>
+</head>
+<body>
+  <input type="button" class="knopka">
+  <header class="header">
+    <div class="header__content">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum minima possimus commodi fugit, eveniet eum adipisci unde iusto reiciendis, laborum temporibus. Beatae odit aliquid nulla alias eaque error tempora omnis sed ducimus reprehenderit optio excepturi eius animi officiis praesentium, placeat dolor facere eos repudiandae, a expedita. Nulla ut, sapiente quidem optio autem provident porro unde beatae? Cumque ad, molestiae minus exercitationem accusamus ex corrupti a reiciendis animi optio hic voluptatem fugiat saepe iste magnam. Pariatur assumenda ipsa facere accusantium ratione quos nesciunt et voluptas! Error fuga rerum ratione amet modi, vitae placeat laborum odit ex! Optio, qui, autem, at eligendi ducimus aliquam nostrum ea obcaecati velit accusamus distinctio. Aliquam non, perferendis deleniti aut quis optio? Ab corporis dolorum illum amet, laborum, dolores officia sequi doloremque sapiente suscipit pariatur inventore earum saepe. Rem rerum eum beatae nemo accusamus quibusdam quia magni corporis dolor recusandae, molestias architecto nesciunt at et hic libero reiciendis quaerat officia accusantium nulla ea ipsa quae aspernatur sed? Cupiditate, fugit ratione unde qui earum aliquid obcaecati quisquam animi et quibusdam reiciendis ex officia deleniti alias quod commodi corrupti cumque? Ipsam corporis libero excepturi voluptas unde laborum sunt velit delectus, facilis fuga deserunt ipsa, aliquid provident. Corrupti molestiae dolore consequuntur dolores aliquid impedit, alias, architecto cupiditate incidunt vel magnam voluptatum aut earum eaque fuga tempora nihil ad officiis illo? Quasi, fugit, praesentium autem laboriosam voluptatum a molestias nesciunt impedit quam animi magni. Ab porro earum debitis iure animi, neque ducimus expedita repellendus? Laboriosam harum aspernatur doloremque corporis natus cum mollitia esse, nulla nihil dolor veritatis velit laudantium. Excepturi iure ea quibusdam in voluptatum ex tempore similique nobis ad accusamus quia minus asperiores voluptate corporis officiis amet quis impedit magni, ipsam nulla suscipit? Saepe numquam repudiandae culpa minima hic, pariatur impedit cupiditate enim tenetur repellat possimus qui illum labore architecto eligendi tempore est? Eaque, consectetur odit perferendis eum optio ullam facere esse fugit repellat rerum assumenda cupiditate ratione soluta officiis aliquid accusamus nostrum. Temporibus eaque expedita accusamus sequi, libero commodi quibusdam, magnam repellendus quaerat neque dolorem aliquam ipsam sit similique! Minima, quaerat? Vitae quod explicabo illo unde, labore cum rem commodi inventore sed pariatur qui nostrum, ex eveniet! Voluptas qui maiores distinctio cumque recusandae reiciendis temporibus possimus consectetur tempore officia ratione, accusamus explicabo dicta eos provident excepturi. Nihil in velit vel, ad, id facere temporibus laborum molestias perspiciatis debitis soluta aliquid voluptate sapiente! Delectus numquam cupiditate eum voluptatum quam? Quo assumenda, atque quibusdam autem accusamus cumque vero ex. Magnam quisquam nisi odit aliquam nostrum minima facere asperiores illo repellat dicta consectetur quod ex, odio consequuntur soluta explicabo laudantium modi. Sunt minima aliquam ad cum, ratione eaque repellat quas, rem architecto laudantium perspiciatis obcaecati reprehenderit quibusdam rerum totam aspernatur? Quae deleniti perferendis eaque impedit laudantium ducimus dolorem facere ad, rem nostrum, obcaecati delectus iure quidem nam explicabo dolor recusandae sint. Debitis ratione voluptatibus autem, recusandae ducimus vel corrupti sit quod et saepe perspiciatis quo commodi unde! Obcaecati magnam unde perspiciatis aliquam dolore? Iusto consequuntur animi odit quis earum voluptas nobis tempore.
+    </div>
+
+    <div class="slider overley">
+      <img class="slider__item" src="images/mini_bands_1.jpg">
+      <img class="slider__item" src="images/mini_bands_2.jpg">
+      <img class="slider__item" src="images/mini_bands_3.jpg">
+    </div>
+    
+
+  </header>
+
+  <script src="scripts/bootstrap.js"></script>
+  <script src="scripts/main.js"></script>
+
+  <script type="text/javascript">
+    $(".knopka").click(function () {
+      // alert(33);
+
+      var a = $(".slider__item").eq(0);
+
+      a.css({display:'block'}).animate({opacity:'1'}, 1000);
+    });
+    var myIndex = 0;
+    carousel();
+
+    function carousel() {
+      var i;
+      var x = $(".slider__item");
+      
+      x.css({display:'none'}).animate({opacity:'0'}, 1000)
+      
+      myIndex++;
+      if (myIndex > x.length) {myIndex = 1}    
+      //x[myIndex-1].style.opacity = "1";
+      //x[myIndex-1].style.display = "block";
+      x.eq(myIndex-1).css({display:'block'}).animate({opacity:'1'}, 1000);
+      setTimeout(carousel, 5000);
+    }
+
+    //function carousel() {
+    //   var i;
+    //   var x = document.getElementsByClassName("slider__item");
+    //   for (i = 0; i < x.length; i++) {
+    //     // x[i].style.display = "none";
+    //     // x[i].style.opacity = "0";
+    //     // $(".slider__item").css({display:'none'}).animate({opacity:'0'}, 1000)
+    //   }
+    //   $(".slider__item").css({display:'none'}).animate({opacity:'0'}, 1000);
+    //   myIndex++;
+    //   if (myIndex > x.length) {myIndex = 1}    
+    //   //x[myIndex-1].style.opacity = "1";
+    //   //x[myIndex-1].style.display = "block";
+    //   a.css({display:'block'}).animate({opacity:'1'}, 1000);
+    //   setTimeout(carousel, 2000);
+    // }
+  </script>
+
+</body>
+</html>

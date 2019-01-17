@@ -1,0 +1,434 @@
+@import "bourbon";
+@import "vars.scss";
+
+.arrow_carrot-2down::after {
+  font-family: 'ElegantIcons';
+  font-size: 16px;
+  content: "\33";
+}
+
+h1 {
+  font-size: 52px; 
+  color: #ed2427;
+}
+
+h2 {
+  font-size: 26px;
+  color: #ed2427;
+}
+
+h3 {
+  font-size: 20px;
+  color: #ed2427;
+}
+
+body {
+  color: #666;
+  font-family: "Open Sans",Arial,sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.7em;
+}
+
+.header {
+  margin-bottom: 50px;
+  
+  &_bg {
+    background: url("../images/mini_bands_1.jpg") no-repeat center center;
+//    background: url("../images/Esonstyle-new.png") no-repeat top center,
+//      url("../images/mini band way4you group.jpg") no-repeat top center;
+      
+    background-size: cover;
+    width: 100%;
+    min-height: 600px;
+    position: relative;
+    box-shadow: 0px 12px 18px -6px rgba(0,0,0,0.3);
+    
+    animation:animatetop 0.4s;
+  }
+}
+
+//.content-about__img {
+//    background-image: url("../images/mini band way4you group.jpg");
+////    background: url("../images/Esonstyle-new.png") no-repeat top center,
+////      url("../images/mini band way4you group.jpg") no-repeat top center;
+//      
+//    background-size: cover;
+//    width: 100%;
+//    min-height: 600px;
+//    position: relative;
+//    margin-bottom: 50px;
+//    box-shadow: 0px 12px 18px -6px rgba(0,0,0,0.3);
+//}
+
+.color-overlay {
+  &::before {
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.527);
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.nav {
+  
+  li {
+    &:last-child a {
+      margin-right: 0;
+    }
+    
+    &:first-child a {
+      margin-left: 0;
+    }
+  }
+  
+  a {
+    font-weight: 600;
+    font-size: 20px;
+    padding: 1.5rem 1.5rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    border: 1px solid $fontColorNav;
+    border-radius: 50px;
+    color: $fontColorNav;
+    transition: all .4s ease-in-out;
+    background-color: rgba(237, 36, 39, 0.5); 
+  }
+  
+  a:hover {
+    //opacity: .7;
+//    color: $fontColorNav;
+    color: #ffffff;
+    background-color: $red; 
+  }
+
+}
+
+.logo {
+  display: block;
+  width: 116px;
+  height: 96px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.dropdown-item:hover, .dropdown-item:focus {
+  background-color: transparent;
+}
+
+.dropdown-item.active {
+  background-color: transparent;
+}
+
+.container-fluid_padding_reset {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.nav_color {
+  background-color: $red;
+}
+
+.dropdown:hover {
+  .dropdown-menu {
+    z-index: 1000;
+    display: block;
+  }
+}
+
+.content-about {
+  position: relative;
+
+  p {
+    text-align: center;
+  }
+
+  button {
+      margin: 1rem;
+      z-index: 100;
+    }
+  
+  .content-about__text {
+    z-index: 100;
+    color: #ffffff;
+    text-align: center;
+    position: relative;
+    padding: 70px 50px;
+    
+    h1 {
+      color: #ffffff;
+      margin-bottom: 30px;
+    }
+
+    p {
+      margin-bottom: 30px;
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  
+  .header {
+    padding-bottom: 20px;  
+  }
+  
+  .content-about {
+    .content-about__text {
+      padding: 30px 30px;
+    }
+  }
+}
+
+
+.separator {
+  border-top-color: rgba(0,0,0,.1);  
+}
+
+.product {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  background-color: #f8f8f8;
+}
+
+.product:nth-child(2n+1) {
+  background-color: transparent;
+  .product__img {
+    float: right;
+    margin-left: 40px;
+    margin-right: 0;
+  }
+  .btn-container {
+    text-align: right;
+  }
+}
+
+.product__name {
+  color: #ed2427;
+  font-weight: 500;
+  line-height: 1em;  
+}
+
+.product__text {
+  text-align: left;
+}
+
+.product__img {
+  margin-right: 40px;
+  float: left;
+}
+
+.product__img_right {
+  float: right;
+  margin-left: 56px;
+}
+
+.btn-container {
+  text-align: left;
+}
+
+.btn {
+  color: #ffffff;
+  border-width: 0px;
+  border-radius: 5px;
+  font-size: 15px;
+  background-color: #e93c31;
+  cursor: pointer;
+  box-shadow: 3px 3px 12px 0px rgba(0,0,0,0.3);
+  transition: all .2s ease-in-out;
+  
+  &::after {
+    font-family: ElegantIcons; 
+    position: absolute;
+    opacity: 0;
+    content: "\35";
+    margin-left: -1em;
+    font-weight: 800;
+    transition: all .2s ease-in-out;
+  }
+  
+  &:hover {
+    padding-right: 20px;
+     
+    &::after{
+      margin-left: 0;
+      opacity: 1;
+    }
+  }
+}
+
+.footer {
+  background-color: #ed2427;
+  color: #fbcfd0;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  a {
+    color: #fbcfd0;
+    text-decoration: none;
+    transition: all .4s ease-in-out;
+    font-weight: 700;
+    font-family: "Open Sans",Arial,sans-serif;
+    &:hover{
+      opacity: .7;
+    }
+  }
+  
+}
+
+.test-grid .row div {
+  height: 100px;
+  background-color: green;
+  &:nth-child(odd) {
+    background-color: red;
+  }
+}
+
+.order-popup {
+  .modal-content {
+    background-color: #5F0344;
+  }
+  
+  .close {
+    color: white;
+  }
+}
+
+.form {
+  padding: 50px 4% 50px 4%;
+  background-color: #5F0344;
+  box-shadow: 0px 100px 100px -60px rgba(0,0,0,0.3);
+  z-index: 120;
+  
+  input[type="text"], input[type="tel"] {
+    background-color: rgba(0,0,0,0.1);
+    color: #ffffff;
+    line-height: 1.5em;
+    border: 0;
+    padding: 16px;
+  }
+  
+  .row:not(:last-child) {
+    margin-bottom: 4%;
+  }
+  
+  button {
+    color: #ed2427;
+    background: #ffffff;
+    background-color: rgb(255, 255, 255);
+    border-width: 10px;
+    border-color: rgba(210,159,104,0);
+    border-radius: 100px;
+    font-size: 16px;
+    //font-family: 'Lato',Helvetica,Arial,Lucida,sans-serif !important;
+    font-weight: 900;
+    background-color: #ffffff;
+    cursor: pointer;
+    
+    &:first-child {
+      margin-right: 1rem;  
+    }
+    
+    &:hover {
+      background-color: #0069d9;
+    }
+  }
+}
+
+.about-product {
+  padding-bottom: 3rem;
+  .photo {
+    img {
+      width: 100%;
+      height: auto;  
+    }
+  }
+  
+  .btn {
+    font-size: 1.25rem;
+    border-radius: 50px;
+    padding: 1rem 1rem;
+    background-color: #ed2427;
+    color: #ffffff;
+    border-color: #ed2427;
+    border: 2px solid;
+    margin-left: 0;
+    
+    &:hover {
+      background-color: transparent;
+      color: #ed2427;
+    }
+  }
+}
+
+.content-full-height {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+}
+
+.overlay {
+  &::before {
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 100;
+  }
+}
+
+.overlay_bgc-black {
+  &::before {
+    background-color: rgba(0, 0, 0, 0.527);
+  }
+}
+
+.thanks {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  height: 100%;
+  
+  .thanks__item {
+    color: #ffffff;
+    text-align: center;
+    z-index: 1000;
+    
+    h1 {
+      color: #ffffff;
+    }
+    
+    a {
+      color: $red;
+      font-weight: bold;
+      
+      &:hover {
+        color: #ffffff;
+      }
+    }  
+  }
+  
+  &_bgimage {
+    background: transparent url("../images/mini band way4you group.jpg") no-repeat top center; 
+    background-size: cover;
+  }
+}
+
+.footer {
+  &__politics {
+    text-align: center;
+    margin-bottom: 15px;
+  }
+  
+  &__requisites {
+    img {
+      margin: 0 auto;
+      display: block;
+    }
+  }
+}
+
+@import "media.scss";
