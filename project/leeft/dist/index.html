@@ -76,6 +76,7 @@
     <link href="resources/css/addition.css" type="text/css" data-template-style="true" rel="stylesheet"/>
     <link href="resources/css/media.css" type="text/css" data-template-style="true" rel="stylesheet"/>
     <link href="resources/css/media2.css" type="text/css" data-template-style="true" rel="stylesheet"/>
+    <link href="resources/js/magnific-popup/magnific-popup.css" type="text/css" data-template-style="true" rel="stylesheet"/>
 
 
 
@@ -743,7 +744,7 @@
             <h2 class="teh-title">Отзывы наших клиентов</h2>
             <div class="teh-reviews">
                 <div class="teh-slider teh-reviews-slider">
-                    <div class="teh-reviews-slider__item">
+                    <div id="popup" class="teh-reviews-slider__item">
                         <div class="teh-reviews-card">
                             <div class="teh-reviews-card__img">
                                 <span>
@@ -757,9 +758,27 @@
                                     я мало что смыслю в создании и раскрутке
                                     сайтов, да и в их работе в целом. Но
                                     обратившись один раз в Leeft за помощью,
-                                    я сразу поняла, что с ними я буду в порядке..
+                                    я сразу поняла, что с ними я буду в порядке.
+
+                                    Мне есть с чем сравнивать. Я не сразу пришла 
+                                    в эту организацию. Я работала и с обычными 
+                                    частниками, иобращалась по многочисленным 
+                                    объявлениям в интернете. Но одни фирмы просили 
+                                    от меня заполнить какие-тотехнические задания 
+                                    на 15 страниц, что для меня равносильно китайской 
+                                    грамоте. Другие только с 6!!! попыткисмогли 
+                                    записать название моего сайта. У третьих вообще 
+                                    какая-то каша в голове. А в Leeft мне просто 
+                                    сказали:«Приходите, мы Вам все расскажем и покажем». 
+                                    И речи уже не шло о сумме их услуг. На рынке 
+                                    предостаточно фирм,которые обещают выполнить данные 
+                                    услуги по смешным ценам. Просто в Leeft работают 
+                                    люди, которым я могудоверять. Люди  которые не 
+                                    задают лишних вопросов. Люди, которые на мои: 
+                                    «Я хочу…. я хочу…., чтобы мне ещезахотеть….?», 
+                                    отвечают: «Сделаем!»
                                 </div>
-                                <a href="teh-support.html#" class="teh-reviews-card__more">читать отзыв</a>
+                                <a href="#popup" class="teh-reviews-card__more">читать отзыв</a>
                                 <div class="teh-reviews-card__footer">
                                     <div class="teh-reviews-card__user">КРЫЛОВА А.А.</div>
                                     <div class="teh-reviews-card__position">Коммерческий директор ООО «Страж-А»</div>
@@ -809,7 +828,7 @@
                                     была поставлена задача разработать
                                     стильный дизайн удобочитаемый интерфейс...
                                 </div>
-                                <a href="teh-support.html#" class="teh-reviews-card__more">читать отзыв</a>
+                                <a href="" class="teh-reviews-card__more">читать отзыв</a>
                                 <div class="teh-reviews-card__footer">
                                     <div class="teh-reviews-card__user">КИРИЛЛ ПЕТРУНЁВ </div>
                                     <div class="teh-reviews-card__position">Маркетолог компании «Лаура-Архангельск»</div>
@@ -1297,6 +1316,8 @@
 <script type="text/javascript" src="template_1bb5ec1ca648795d984cb2ad7f13274b.js"></script>
 
 
+<script type="text/javascript" src="resources/js/magnific-popup/jquery.magnific-popup.min.js"></script>
+
 
 <script type="text/javascript">
 
@@ -1535,8 +1556,64 @@
             var filename = $(this).val().replace(/.*\\/, "");
             $(".form .file-upload__name").text(filename);
         });
+       
+        $('.teh-reviews-card__more').magnificPopup({
+            
+            
+                type: 'inline',
+                preloader: false,
+                modal: true,
+                callbacks: {
+                    open: function() {
+                        $(".teh-reviews-card__text").addClass('show');            
+                    }
+                }
 
+            });
+
+            $(".teh-reviews-card__text").text(function () {
+                var size = 500;
+                var content = $(this).text();
+                if (content.length > size) {
+                    return content.slice(0, size) + ' ...';
+                }
+            });
         
+            //magnificPopup({
+            // you may add other options here, e.g.:
+            //type: 'image',
+            //preloader: true,
+            // type: 'inline',
+            // preloader: false,
+            // focus: '#username',
+            // modal: true
+		    
+
+            // callbacks: {
+            //     open: function() {
+            //         $('.teh-reviews-slider').slick({
+            //             infinite: true,
+            //             slidesToShow: 2,
+            //             arrows: true,
+            //             slidesToScroll: 2,
+            //             responsive: [
+            //                 {
+            //                 breakpoint: 901,
+            //                 settings: {
+            //                     slidesToShow: 1,
+            //                     slidesToScroll: 1,
+            //                     infinite: true,
+            //                 }
+            //                 }
+            //             ]
+            //         });
+            //     },
+            //     close: function() {
+            //     // Will fire when popup is closed
+            //     }
+            //     // e.t.c.
+            // }
+       // });
 
     });
 

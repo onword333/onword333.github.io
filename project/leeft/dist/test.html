@@ -3,17 +3,35 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link href="resources/js/magnific-popup/magnific-popup.css" type="text/css" data-template-style="true" rel="stylesheet"/>
 	<title>Мои работы</title>
 </head>
 <body>
-  <ul>
-    <li><a href="https://onword333.github.io/yoga/dist/">Интернет магазин, товары для йоги</a></li>
-    <li><a href="https://onword333.github.io/makulatura/">Сайт приема макулатуры</a></li>
-    <li><a href="https://onword333.github.io/fitnes/dist/">Сайт-лендинг фитнес резинки</a></li>
-    <li><a href="https://onword333.github.io/flex_form/">Флекс форма</a></li>
-  </ul>
-
   
+  <div id="modal_content" style="background-color: white">
+      <a href="#modal_content" class="popup-modal">открыть</a>
+      <ul>
+          <li><a href="https://onword333.github.io/yoga/dist/">Интернет магазин, товары для йоги</a></li>
+          <li><a href="https://onword333.github.io/makulatura/">Сайт приема макулатуры</a></li>
+          <li><a href="https://onword333.github.io/fitnes/dist/">Сайт-лендинг фитнес резинки</a></li>
+          <li><a href="https://onword333.github.io/flex_form/">Флекс форма</a></li>
+        </ul>
+  </div>
+  
+
+  <script type="text/javascript" src="resources/js/jquery-3.3.1.min.js"></script>
+  <script type="text/javascript" src="resources/js/magnific-popup/jquery.magnific-popup.min.js"></script>
+
+  <script type="text/javascript">
+  $(function () {
+    $('.popup-modal').magnificPopup({
+      type: 'inline',
+      preloader: false,
+      modal: true
+    });
+    
+  });
+  </script>
 </body>
 </html>
