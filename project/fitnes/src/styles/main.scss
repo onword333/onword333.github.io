@@ -24,27 +24,38 @@ h3 {
 
 body {
   color: #666;
-  font-family: "Open Sans",Arial,sans-serif;
+  font-family: "Open Sans", Arial,sans-serif;
   font-weight: 500;
   font-size: 14px;
   line-height: 1.7em;
+}
+
+.slider-container {
+  position: relative;
+  
+  .slider {
+    &__img {
+      width: 100%;
+      min-height: 675px;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center center;
+    }
+  }
 }
 
 .header {
   margin-bottom: 50px;
   
   &_bg {
-    background: url("../images/mini_bands_1.jpg") no-repeat center center;
-//    background: url("../images/Esonstyle-new.png") no-repeat top center,
-//      url("../images/mini band way4you group.jpg") no-repeat top center;
-      
-    background-size: cover;
-    width: 100%;
-    min-height: 600px;
-    position: relative;
-    box-shadow: 0px 12px 18px -6px rgba(0,0,0,0.3);
+    // background: url("../images/mini_bands_1.jpg") no-repeat center center;
+    // background-size: cover;
+    // width: 100%;
+    // min-height: 600px;
+    // position: relative;
+    // box-shadow: 0px 12px 18px -6px rgba(0,0,0,0.3);
     
-    animation:animatetop 0.4s;
+    // animation:animatetop 0.4s;
   }
 }
 
@@ -61,7 +72,7 @@ body {
 //    box-shadow: 0px 12px 18px -6px rgba(0,0,0,0.3);
 //}
 
-.color-overlay {
+.slider-overlay {
   &::before {
     position: absolute;
     content: '';
@@ -70,6 +81,7 @@ body {
     background-color: rgba(0, 0, 0, 0.527);
     width: 100%;
     height: 100%;
+    z-index: 10;
   }
 }
 
@@ -140,8 +152,9 @@ body {
 }
 
 .content-about {
-  position: relative;
-
+  position: absolute;
+  top: 0;
+  z-index: 20;
   p {
     text-align: center;
   }

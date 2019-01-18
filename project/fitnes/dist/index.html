@@ -8,6 +8,7 @@
     <link rel="stylesheet" type="text/css" href="styles/fonts.css">
     <link rel="stylesheet" type="text/css" href="styles/main.css">
     <title>Фитнес резинки</title>
+
     <!-- Yandex.Metrika counter -->
     <script type="text/javascript">
       (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
@@ -22,7 +23,12 @@
           webvisor:true
         });
     </script>
-    <noscript><div><img src="https://mc.yandex.ru/watch/51678887" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+    
+    <noscript>
+      <div>
+        <img src="https://mc.yandex.ru/watch/51678887" style="position:absolute; left:-9999px;" alt="">
+      </div>
+    </noscript>
     <!-- /Yandex.Metrika counter -->
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -36,18 +42,104 @@
     </script>
 
     <script src='scripts/jquery.min.js'></script>
+    <link href="scripts/slick/slick.css" type="text/css" data-template-style="true" rel="stylesheet"/>
+    <link href="scripts/slick/slick-theme.css" type="text/css" data-template-style="true" rel="stylesheet"/>
 
     <script type="text/javascript">
       var slideIndex = 0;
       $(document).ready(function() {
-        carousel();
+        //carousel();
+
+        $('.header .slider').slick({
+          аccessibility: false,
+          fade: true,
+          infinite: true,
+          cssEase: 'linear',
+          autoplay: true,
+          autoplaySpeed: 3000,
+          dots: false,
+          prevArrow: null,
+          nextArrow: null
+        });
+
+        $('.slider-2').slick({
+          аccessibility: false,
+          fade: true,
+          infinite: true,
+          cssEase: 'linear',
+          autoplay: true,
+          autoplaySpeed: 3000,
+          dots: false,
+          prevArrow: null,
+          nextArrow: null
+        });
+        
+        
       });
     </script>
+
+    <style>
+      .slider img {
+        width: 100%;
+      }
+    </style>
 
   </head>
 
   <body>
-    <header class="header header_bg color-overlay">
+ 
+
+    <header class="header">
+      <div class="slider-container slider-overlay">
+
+        <div class="slider">
+          <div>
+              <div class="slider__img" style="background-image: url('images/mini_bands_2.jpg')">2</div>
+          </div>
+          <div>
+            <div class="slider__img" style="background-image: url('images/mini_bands_1.jpg')">1</div>
+          </div>
+          <div>
+              <div class="slider__img" style="background-image: url('images/mini_bands_3.jpg')">3</div>
+          </div>
+        </div>
+
+        <section class="content-about">
+            <div class="">
+
+              <div class="content-about__text">
+                <h1>Фитнес резинки за 1690 руб.</h1>
+                <p>
+                  Всего 30 минут в день — эффект как от полноценного занятия в зале.
+                  Не нужно покупать абонемент и работать с тренером: всё можно делать не выходя из дома.
+                  Достаточно выполнять комплекс базовых упражнений
+                  и через месяц можно наслаждаться желанной фигурой.
+                </p>
+              </div>
+<!--
+              <div class="row">
+                <button class="btn" id="doOrder" type="button">Сделать заказ</button>
+                <button class="btn" id="toLearnMore" type="button">Узнать больше</button>
+              </div>
+-->
+
+              <nav>
+                <ul class="nav justify-content-center">
+                  <li class="nav-item dropdown">
+                    <a class="nav-link" href="#anchor1" id="toLearnMore">Узнать больше</a>
+                  </li>
+<!--
+                  <li class="nav-item dropdown">
+                    <a class="nav-link arrow_carrot-2down" href="#exercises">Упражнения</a>
+                  </li>
+-->
+                </ul>
+              </nav>
+            </div>
+          </section>
+
+      </div>
+        
       <div class="container">
         <div class="row">
           <div class="col-sm-12">
@@ -84,7 +176,7 @@
                 </ul>
               </nav> -->
 
-              <section class="content-about">
+              <!-- <section class="content-about">
                 <div class="">
 
                   <div class="content-about__text">
@@ -96,27 +188,16 @@
                       и через месяц можно наслаждаться желанной фигурой.
                     </p>
                   </div>
-  <!--
-                  <div class="row">
-                    <button class="btn" id="doOrder" type="button">Сделать заказ</button>
-                    <button class="btn" id="toLearnMore" type="button">Узнать больше</button>
-                  </div>
-  -->
-
+  
                   <nav>
                     <ul class="nav justify-content-center">
                       <li class="nav-item dropdown">
                         <a class="nav-link" href="#anchor1" id="toLearnMore">Узнать больше</a>
                       </li>
-  <!--
-                      <li class="nav-item dropdown">
-                        <a class="nav-link arrow_carrot-2down" href="#exercises">Упражнения</a>
-                      </li>
-  -->
                     </ul>
                   </nav>
                 </div>
-              </section>
+              </section> -->
 
 
           </div>
@@ -127,7 +208,7 @@
       <div class="row">
         <div class="col-sm-12">
           <main class="content">
-            <section class="content-about">
+            <section>
 <!--
               <div class="content-about__img color-overlay">
                 <div class="content-about__text">
@@ -158,10 +239,18 @@
                   <div class="col-md-6">
                     <h2>О товаре</h2>
 
-                    <div class="photo">
-                      <img src="images/Esonstyle-new.png">
+                    <div class="slider-2">
+                      <div class="photo">
+                        <img src="images/Esonstyle-new.png">
+                      </div>
+                      <div class="photo">
+                        <img src="images/hands.jpg">
+                      </div>
                     </div>
+
+                
                   </div>
+                
                   <div class="col-md-6">
                     <div id="features" class="features">
                       <h3>Характеристики</h3>
@@ -443,5 +532,6 @@
     <script src="scripts/bootstrap.js"></script>
     <script src="scripts/m1shop.js"></script>
     <script src="scripts/main.js"></script>
+    <script src='scripts/slick/slick.min.js'></script>
   </body>
 </html>
