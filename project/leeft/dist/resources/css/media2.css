@@ -46,6 +46,9 @@
     -webkit-box-shadow: 3px 8px 24.22px 6.78px rgba(0, 0, 0, 0.3);
             box-shadow: 3px 8px 24.22px 6.78px rgba(0, 0, 0, 0.3); }
 
+.block_display-none {
+  display: none; }
+
 .teh-box .teh-btn {
   margin-bottom: 12px; }
 
@@ -134,7 +137,8 @@
     -webkit-border-radius: 0 4px 0 4px;
             border-radius: 0 4px 0 4px;
     background: #1fc6aa url("../img/form-btn-close.png") center center no-repeat;
-    cursor: pointer; }
+    cursor: pointer;
+    z-index: 10; }
     .window-modal__close:hover {
       background-color: #17d8b8; }
   .window-modal__content {
@@ -289,6 +293,29 @@
       width: 15px;
       height: 18px;
       background: transparent url("../img/form-clip.png") center center no-repeat; }
+
+.teh-reviews {
+  position: relative; }
+  .teh-reviews .window-modal__close {
+    display: none; }
+
+.mfp-content.teh {
+  padding-bottom: 0;
+  max-width: 1055px;
+  -webkit-border-radius: 4px;
+          border-radius: 4px; }
+
+.mfp-content .teh-reviews {
+  -webkit-border-radius: 4px;
+          border-radius: 4px; }
+  .mfp-content .teh-reviews .window-modal__close {
+    display: block; }
+
+.mfp-content .slick-prev {
+  left: -75px; }
+
+.mfp-content .slick-next {
+  right: -76px; }
 
 @media screen and (max-width: 960px) {
   .teh {

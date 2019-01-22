@@ -742,9 +742,10 @@
             </div>
 
             <h2 class="teh-title">Отзывы наших клиентов</h2>
-            <div class="teh-reviews">
+            <div id="popup" class="teh-reviews">
+                <div class="window-modal__close"></div>
                 <div class="teh-slider teh-reviews-slider">
-                    <div id="popup" class="teh-reviews-slider__item">
+                    <div class="teh-reviews-slider__item">
                         <div class="teh-reviews-card">
                             <div class="teh-reviews-card__img">
                                 <span>
@@ -752,7 +753,8 @@
                                 </span>
                             </div>
                             <div class="teh-reviews-card__body">
-                                <div class="teh-reviews-card__text">
+                                <div class="teh-reviews-card__text-preview"></div>
+                                <div class="teh-reviews-card__text block_display-none">
                                     Мне нравится работать c компанией Leeft.
                                     Как, наверно, и многие клиенты этой фирмы,
                                     я мало что смыслю в создании и раскрутке
@@ -795,15 +797,21 @@
                                 </span>
                             </div>
                             <div class="teh-reviews-card__body">
-                                <div class="teh-reviews-card__text">
+                                <div class="teh-reviews-card__text-preview"></div>
+                                <div class="teh-reviews-card__text block_display-none">                                    
                                     Для дилерского центра Лаура был необходим
                                     новый сайт. Для автосалона важно, чтобы
                                     сайт был не только стильным и красивым,
                                     но и функциональным. Перед компанией Лифт
                                     была поставлена задача разработать
-                                    стильный дизайн удобочитаемый интерфейс...
+                                    стильный дизайн удобочитаемый интерфейс.
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut, libero laborum dolorum et modi facere accusantium nostrum nesciunt asperiores enim id quas aliquid tempora fuga. Molestiae repellendus sed cumque! Veritatis?
+                                    Nesciunt quisquam et voluptas reiciendis optio voluptatum repellendus pariatur? Nam error optio voluptas animi nulla asperiores totam illum explicabo eum, ea ratione consequatur quis culpa, laboriosam autem suscipit provident maxime?
+                                    Magnam delectus voluptate, nam debitis quo sapiente error necessitatibus vel. Corporis aut consequuntur, sequi neque blanditiis alias porro eaque, similique eos quo repellat aspernatur veniam optio quisquam laudantium enim obcaecati.
+                                    Enim quia minima, unde reiciendis eius alias! Consequatur nisi error eum assumenda quos ipsam doloribus. Itaque quo, error ducimus vero eveniet cupiditate animi aliquid sunt sequi velit perferendis, beatae labore!
+                                    Libero neque architecto, laborum itaque temporibus, dolor officiis labore pariatur quo eius laboriosam explicabo optio illo aut sit provident voluptatibus aperiam doloribus quos. Ex dicta porro natus labore sapiente! Quo.
                                 </div>
-                                <a href="teh-support.html#" class="teh-reviews-card__more">читать отзыв</a>
+                                <a href="#popup" class="teh-reviews-card__more">читать отзыв</a>
                                 <div class="teh-reviews-card__footer">
                                     <div class="teh-reviews-card__user">КИРИЛЛ ПЕТРУНЁВ </div>
                                     <div class="teh-reviews-card__position">Маркетолог компании «Лаура-Архангельск»</div>
@@ -820,17 +828,23 @@
                                 </span>
                             </div>
                             <div class="teh-reviews-card__body">
-                                <div class="teh-reviews-card__text">
+                                <div class="teh-reviews-card__text-preview"></div>
+                                <div class="teh-reviews-card__text block_display-none">
                                     Для дилерского центра Лаура был необходим
                                     новый сайт. Для автосалона важно, чтобы
                                     сайт был не только стильным и красивым,
                                     но и функциональным. Перед компанией Лифт
                                     была поставлена задача разработать
-                                    стильный дизайн удобочитаемый интерфейс...
+                                    стильный дизайн удобочитаемый интерфейс.
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus tenetur error, saepe minima minus nostrum aut provident est, nam autem iure, laboriosam sed laudantium esse totam natus? Tempora, culpa nobis.
+                                    Voluptatum, eaque omnis voluptatibus blanditiis architecto incidunt eligendi officiis non provident accusamus maiores aliquam excepturi doloribus, dolor cupiditate iste. Veniam aperiam perferendis autem sint magnam voluptas aliquam dicta earum quidem!
+                                    Nihil reprehenderit veniam, omnis quasi vitae officiis autem illum repudiandae, quas dolores necessitatibus veritatis non numquam! Excepturi, suscipit? Eveniet quod est nemo officiis debitis alias tenetur eaque. Explicabo, quibusdam cumque.
+                                    Maiores explicabo tenetur commodi quis veritatis similique nostrum soluta, excepturi cupiditate unde aperiam ullam. Labore, voluptatibus perferendis possimus incidunt dolorem ut illum, fugiat quisquam quam pariatur voluptate exercitationem veritatis vel!
+                                    Commodi cupiditate, quasi vero quia illum natus fugit sapiente ipsum, culpa maiores vel asperiores officia laudantium at quibusdam. Rerum ratione quo culpa voluptatum, voluptates molestias nam quod fugit facere itaque.
                                 </div>
-                                <a href="" class="teh-reviews-card__more">читать отзыв</a>
+                                <a href="#popup" class="teh-reviews-card__more">читать отзыв</a>
                                 <div class="teh-reviews-card__footer">
-                                    <div class="teh-reviews-card__user">КИРИЛЛ ПЕТРУНЁВ </div>
+                                    <div class="teh-reviews-card__user">МАКСИМ АВЕРИН </div>
                                     <div class="teh-reviews-card__position">Маркетолог компании «Лаура-Архангельск»</div>
                                 </div>
                             </div>
@@ -1317,6 +1331,8 @@
 
 
 <script type="text/javascript" src="resources/js/magnific-popup/jquery.magnific-popup.min.js"></script>
+<script type="text/javascript" src="resources/js/shave.js"></script>
+<script type="text/javascript" src="resources/js/clamp.min.js"></script>
 
 
 <script type="text/javascript">
@@ -1546,7 +1562,6 @@
         });
 
 
-
         $(".window-modal__close").on("click", function () {
             $(this).parent().parent().removeClass("show");
         });
@@ -1557,93 +1572,58 @@
             $(".form .file-upload__name").text(filename);
         });
        
+
+        var indexSlide = 0;
+        $('.teh-reviews-card__more').on('click', function () {
+            var slickSlide = $(this).parent().parent().parent();
+            indexSlide = slickSlide.attr('data-slick-index');            
+        });
+
         $('.teh-reviews-card__more').magnificPopup({
-            
-            
-                type: 'inline',
-                preloader: false,
-                modal: true,
-                callbacks: {
-                    open: function() {
-                        $(".teh-reviews-card__text").addClass('show');            
-                    }
+            type: 'inline',
+            preloader: false,
+            modal: true,
+            callbacks: {
+                open: function() {
+                    $(".mfp-content").addClass('teh');         
+                    $('.teh-reviews-card__more').addClass('block_display-none');
+                    $('.teh-reviews-card__text-preview').addClass('block_display-none');
+                    $('.teh-reviews-card__text').removeClass('block_display-none');
+                    
+                    $('.teh-reviews-slider').slick('slickSetOption', 'slidesToShow', 1, true);
+                    $('.teh-reviews-slider').slick('slickSetOption', 'slidesToScroll', 1, true);
+                    
+                    $('.teh-reviews-slider').slick('slickGoTo', indexSlide, true);
                 }
+            }
+        });
 
-            });
+        $(document).on('click', '.mfp-content .teh-reviews .window-modal__close', function (e) {
+            e.preventDefault();
+            $.magnificPopup.close();
+            
+            var slidesToShow = window.matchMedia('(max-width: 900px)').matches ? 1 : 2;
+            var slidesToScroll = window.matchMedia('(max-width: 900px)').matches ? 1 : 2;
 
-            $(".teh-reviews-card__text").text(function () {
-                var size = 500;
-                var content = $(this).text();
-                if (content.length > size) {
-                    return content.slice(0, size) + ' ...';
-                }
-            });
-        
-            //magnificPopup({
-            // you may add other options here, e.g.:
-            //type: 'image',
-            //preloader: true,
-            // type: 'inline',
-            // preloader: false,
-            // focus: '#username',
-            // modal: true
-		    
+            $('.teh-reviews').removeClass('mfp-hide');
+            $('.teh-reviews-card__more').removeClass('block_display-none');
 
-            // callbacks: {
-            //     open: function() {
-            //         $('.teh-reviews-slider').slick({
-            //             infinite: true,
-            //             slidesToShow: 2,
-            //             arrows: true,
-            //             slidesToScroll: 2,
-            //             responsive: [
-            //                 {
-            //                 breakpoint: 901,
-            //                 settings: {
-            //                     slidesToShow: 1,
-            //                     slidesToScroll: 1,
-            //                     infinite: true,
-            //                 }
-            //                 }
-            //             ]
-            //         });
-            //     },
-            //     close: function() {
-            //     // Will fire when popup is closed
-            //     }
-            //     // e.t.c.
-            // }
-       // });
+            $('.teh-reviews-card__text-preview').removeClass('block_display-none');
+            $('.teh-reviews-card__text').addClass('block_display-none');
+
+            $('.teh-reviews-slider').slick('slickSetOption', 'slidesToShow', slidesToShow, true);
+            $('.teh-reviews-slider').slick('slickSetOption', 'slidesToScroll', slidesToScroll, true);
+        });
+
+        $(".teh-reviews-card__text-preview").text(function () {
+            var size = 500;                
+            var content = $('.teh-reviews-card__text').text();
+            if (content.length > size) {
+                return content.slice(0, size) + ' ...';
+            }
+        });
 
     });
-
-
-    // Assume we have the following values in Photoshop
-    // Blend Mode: Normal (no other blend mode is supported in CSS)
-    // Color: 0,0,0
-    // Opacity: 25%
-    // Angle: 135deg
-    // Distance: 4px
-    // Spread: 0%
-    // Size: 4px
-    function photoshopDropShadow2CSSBoxShadow(color, opacity, angle, distance, spread, size) {
-        // convert the angle to radians
-        angle = (180 - angle) * Math.PI / 180;
-
-        // the color is just an rgba() color with the opacity.
-        // for simplicity this function expects color to be an rgb string
-        // in CSS, opacity is a decimal between 0 and 1 instead of a percentage
-        color = "rgba(" + color + "," + opacity/100 + ")";
-
-        // other calculations
-        var offsetX = Math.round(Math.cos(angle) * distance) + "px",
-            offsetY = Math.round(Math.sin(angle) * distance) + "px",
-            spreadRadius = (size * spread / 100) + "px",
-            blurRadius = (size - parseInt(spreadRadius, 10)) + "px";
-        return offsetX + " " + offsetY + " " + blurRadius + " " + spreadRadius + " " + color;
-    }
-
-    //alert(photoshopDropShadow2CSSBoxShadow("0, 0, 0", 30, 120, 5, 21, 18));
 </script>
 
 
