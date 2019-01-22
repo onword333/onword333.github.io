@@ -372,13 +372,25 @@ body {
 .mfp-content {
   .teh-reviews {
     border-radius: 4px;
+    padding-left: 40px;
+    
     .window-modal__close {
       display: block;
+    }
+
+    .teh-reviews-slider {
+      padding-left: 0;
+      padding-right: 0;
+    }
+
+    .teh-reviews-slider__item {
+      padding-left: 0;
+      padding-right: 0;
     }
   }
 
   .slick-prev {
-    left: -75px;
+    left: -55px;
   }
 
   .slick-next {
@@ -637,6 +649,24 @@ body {
     &::before {
       top: -15px;
       left: -25px;
+    }
+  }
+
+  .mfp-content {
+    .teh-reviews {
+      padding-left: 15px;
+      padding-right: 15px;
+      padding-bottom: 35px;
+
+      .slick-prev, 
+      .slick-next {
+        display: none;
+      }
+
+      .teh-reviews-card__body::before {
+        top: -48px;
+        left: 0px;
+      }
     }
   }
 }
