@@ -13,6 +13,7 @@ body {
   padding: 26px 20px;
 }
 
+
 .jobs {
   font: 16px/1.4 Arial, Tahoma, Verdana, serif;
   box-sizing: border-box;
@@ -47,15 +48,27 @@ body {
     font-size: 15px;
     // vertical-align: top;
 
-    &:hover {
+    &_active {
       background-color: #20a9fa;
       color: #ffffff;
     }
+
+    &:hover {
+      // background-color: #20a9fa;
+    }
  
-    p {
+    a {
+      display: block;
       margin: 0;
+      text-decoration: none;
+      color: #000000;
       
       padding: 10px 15px 15px 15px;
+
+      &:hover {
+        color: #ffffff;
+        background-color: #20a9fa;
+      }
     }
   }
 }
@@ -138,9 +151,21 @@ body {
   padding: 11px 28px 13px 28px;
   font-size: 19px;
   text-align: center;
+  cursor: pointer;
+
+  &:hover {
+    background-color: #20a9fa;
+  }
 }
 
 .form {
+
+  & > h1 {
+    font-size: 36px;
+    border-bottom: 2px solid #000000;
+    padding-bottom: 13px;
+    margin-bottom: 0;
+  }
 
   form {
     background-color: #f7f7f7;
@@ -148,8 +173,17 @@ body {
     box-sizing: border-box;
   }
 
+  &__text {
+    font-size: 18px;
+    margin-bottom: 14px;
+  }
+
+  &__consent {
+    font-size: 12px;
+  }
+
   input {
-    padding: 15px;
+    padding: 24px;
     display: block;
     margin-bottom: 10px;
     width: 100%;
@@ -157,11 +191,15 @@ body {
   }
 
   .btn {
+    font-size: 24px;
+    margin-bottom: 10px;
+    margin-top: 12px;
     border: 0;
     display: block;
     width: 100%;
-    padding-top: 22px;
-    padding-bottom: 24;;
+    padding-top: 19px;
+    padding-bottom: 21px;
+    
   }
 
   label {
