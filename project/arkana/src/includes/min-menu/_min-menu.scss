@@ -1,0 +1,13 @@
+.min-menu {
+  display: inline-block;
+
+  &__icon {
+    text-decoration: none;
+    background: transparent url('../images/min-menu-icon.png') center center no-repeat;
+    width: 18px;
+    height: 18px;
+    display: inline-block;
+    margin-right: 25px;
+    vertical-align: top;
+  }
+}

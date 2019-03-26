@@ -1,0 +1,37 @@
+@import "bourbon";
+
+@include font-face(
+  "MontserratWeb",
+  "../fonts/montserrat-v12-cyrillic_latin/montserrat-v12-cyrillic_latin-regular",
+  ("woff", "woff2", "ttf", "svg", "eot"))
+{
+  font-style: normal;
+  font-weight: 400; // regular
+}
+
+@include font-face(
+  "MontserratWeb",
+  "../fonts/montserrat-v12-cyrillic_latin/montserrat-v12-cyrillic_latin-500",
+  ("woff", "woff2", "ttf", "svg", "eot"))
+{
+  font-style: normal;
+  font-weight: 500; // medium
+}
+
+@include font-face(
+  "MontserratWeb",
+  "../fonts/montserrat-v12-cyrillic_latin/montserrat-v12-cyrillic_latin-600",
+  ("woff", "woff2", "ttf", "svg", "eot"))
+{
+  font-style: normal;
+  font-weight: 600; // semibold
+}
+
+@include font-face(
+  "SocialIcon",
+  "../fonts/social/Socicon",
+  ("woff", "woff2", "ttf", "svg", "eot"))
+{
+  font-style: normal;
+  font-weight: normal;
+}

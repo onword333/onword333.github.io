@@ -1,0 +1,11 @@
+mixin getInstaList()
+  ul(class="insta-list")
+    - for (var i = 0; i < 3; i++) {
+        li(class="insta-list__item")
+          img(src="images/insta-#{i+1}.jpg")
+    - }
+
+div(class="insta")
+  +getInstaList()
+  div(class="insta__text text-center")
+    span #Instagram

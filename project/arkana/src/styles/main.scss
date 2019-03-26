@@ -1,0 +1,257 @@
+@import "bourbon";
+@import "vars.scss";
+@import "functions.scss";
+
+//@import "../includes/header/header.scss";
+
+
+
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font: 1rem/1.5 "MontserratWeb", sans-serif;
+  padding: 0;
+  margin: 0;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: #000000;
+}
+
+.h2 {
+  font-size: 2.625rem;
+  font-weight: 400;
+}
+
+.text-center {
+  text-align: center;  
+}
+
+.center-block {
+  margin: 0 auto;
+}
+
+.clear-fix::after {
+  content: '';
+  clear: both;
+  display: block;
+}
+
+.line {
+  width: 9.1228%;
+  border-width: 1px 0 0 0;
+  border-color: #ddd;
+  border-style: solid;
+}
+
+.container-fluid {
+  width: 100%;
+  background-color: #dddddd;
+}
+
+.wrap {
+  max-width: 1140px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.main {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.header {  
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-top: 24px;
+}
+
+.header-grid {
+  display: flex;
+  margin-bottom: 38px;
+
+  &__item {
+    flex: 1;
+  }
+}
+
+.inline-container {
+  margin-top: 11px;
+  display: table;
+  & > * {
+    display: table-cell;
+  }
+
+  &_float-left {
+    float: left;
+  }
+
+  &_float-right {
+    float: right;
+  }
+}
+
+.main-nav {
+  margin-bottom: 50px;
+}
+
+.btn {
+  font-size: .6875rem;
+  font-weight: 400;
+  color: #fff;
+  background-color: #000;
+  border: none;
+  font-family: "MontserratWeb", sans-serif;
+  padding: 5.7830% 12.3355% 5.7830% 12.3355%;
+  text-transform: uppercase;
+  cursor: pointer;
+
+  &:hover {
+    background-color: #000000;
+    color: #fff;
+  }
+}
+
+.btn.active {
+  background-color: #000000;
+  color: #fff;
+}
+
+.tabs {
+  justify-content: center;
+  display: flex;
+  margin-bottom: 42px;
+
+  &__item {
+    flex-basis: 137px;
+    margin-right: 20px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  &__tab {
+    padding: 11px 0px;
+    width: 100%;
+    background-color: #eeeeee;
+    color: #000;
+
+    &_triangle-bottom {
+      position: relative;
+      margin-bottom: 8px;
+
+      &::after {
+        position: absolute;
+        content: '';
+        border: 8px solid transparent;
+        border-top: 8px solid #eeeeee;
+        top: 100%;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+
+      &:hover::after {
+        border-color: #292929 transparent transparent transparent;  
+      }
+    }
+
+    &:hover {
+      background-color: #292929;
+      color: #d3d3d3;
+    }
+
+    &_active {
+      background-color: #292929;
+      color: #d3d3d3;
+    }
+
+    &_active#{&}_triangle-bottom::after {
+      border-color: #292929 transparent transparent transparent;
+    }
+  }
+}
+
+.footer {
+  padding-top: 56px;
+  padding-bottom: 80px;
+  
+  padding-left: 15px;
+  padding-right: 15px;
+	
+}
+
+.footer-grid {
+  display: flex;
+  justify-content: space-between;
+  font-size: 13px;
+  font-weight: 400;
+  color: #929292;
+
+  &__col {
+    flex-basis: 255px;  
+  }
+}
+
+.b-footer {
+  &__title {
+    font-size: toRem(16);
+    color: #000;
+    margin-bottom: 22px;
+  }
+
+  &__list {}
+
+  &__item {}
+
+  &__link {
+    line-height: 30px;
+    cursor: pointer;
+
+    &:hover {
+      color: #6d6d6d;
+    }
+  }
+
+  &__link, &__text {
+    font-size: toRem(12);
+    color: #929292;
+  }
+
+  &__text {
+    margin-bottom: 36px;
+  }
+}
+
+
+
+
+
+@import "../includes/search/search.scss";
+@import "../includes/logo/logo.scss";
+@import "../includes/min-menu/min-menu.scss";
+@import "../includes/share/share.scss";
+@import "../includes/basket/basket.scss";
+@import "../includes/main-menu/main-menu.scss";
+@import "../includes/slider/slider.scss";
+@import "../includes/advantages/advantages.scss";
+@import "../includes/themeblock/themeblock.scss";
+@import "../includes/product/product.scss";
+@import "../includes/banner/banner.scss";
+@import "../includes/logo-list/logo-list.scss";
+@import "../includes/instagram/instagram.scss";
+@import "../includes/map/map.scss";
+@import "../includes/social/social.scss";
+@import "../includes/subscribe/subscribe.scss";
+
+@import "media.scss";

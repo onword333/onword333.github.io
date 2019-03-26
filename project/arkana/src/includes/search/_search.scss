@@ -1,0 +1,20 @@
+.search {
+  display: inline-block;
+  position: relative;
+
+  &__button {
+    background: transparent url('../images/search-icon.png') center center no-repeat;
+    width: 18px;
+    height: 18px;
+    border: none;
+    vertical-align: top;
+  }
+
+  &__input {
+    position: absolute;
+    display: none;
+    width: 418px;
+    border: none;
+    padding: 17px;
+  }
+}

@@ -1,0 +1,35 @@
+.subscribe {
+  
+
+  &__input {
+    border: none;
+   
+    padding: 19px 18px;
+    display: block;
+    font-family: "MontserratWeb", sans-serif;
+    font-size: toRem(11);
+    font-weight: 400;
+    width: 100%;
+  }
+
+  &__button {
+    border: 1px solid #000000;
+    font-family: "MontserratWeb", sans-serif;
+    font-size: toRem(11);
+    width: 100%;
+    cursor: pointer;
+    display: block;
+    
+    color: #000000;
+    text-transform: uppercase;
+    font-weight: 500;
+    padding: 19px 18px;
+    background: transparent;
+    text-align: center;
+
+    &:hover {
+      background-color: #000000;
+      color: #ffffff;
+    }
+  }
+}

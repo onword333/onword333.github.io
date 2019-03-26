@@ -1,0 +1,116 @@
+.slider {
+  position: relative;
+  padding-right: 70px;
+  padding-left: 70px;
+
+  &__content {
+    font-weight: 400;
+    max-width: 365px;
+  }
+
+  &__slide {
+    background: url('../images/slide-1.jpg') no-repeat top center;
+    background-size: cover;
+    min-height: 583px;
+  }
+  
+  &__h1 {
+    font-size: 3.5rem;
+    color: #161918;
+    font-weight: 400;
+    margin-bottom: 8px;
+  }
+
+  &__text {
+    font-size: 0.8125rem;
+    color: #7f7f7f;
+    margin-top: 0;
+    margin-bottom: 47px;
+  }
+
+  &__button {
+    &:hover {
+      background-color: #fff;
+      color: #000000;
+    }
+  }
+}
+
+.arrow {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  border: 3px solid #ffffff;
+  position: absolute;
+  top: 104px;
+  cursor: pointer;
+
+  &_left {
+    left: 0px;
+  }
+
+  &_right {
+    right: -0px;
+  }
+
+  &__prev, 
+  &__next {
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    border: 2px solid #c8c8c8;
+    transform: translate(-50%, -50%) rotate(135deg);
+    top: 50%;
+    left: 50%;
+    border-left: none;
+    border-top: none;
+  }
+
+  &__next {
+    transform: translate(-50%, -50%) rotate(-45deg);
+  }
+}
+
+.slider-dots, .slick-dots {
+  display: block;
+  position: absolute;
+  bottom: 34px;
+
+  &__item, li {
+    display: inline-block;
+    background-color: #fff;
+    margin-right: 5px;
+
+    &:last-child .slider-dots__btn  {
+      margin-right: 0;
+    }
+  }
+
+
+
+  &__btn, button {
+    border: 0;
+    background: transparent;
+    display: block;
+    height: 10px;
+    width: 10px;
+    outline: none;
+    line-height: 0;
+    font-size: 0;
+    color: transparent;
+    padding: 5px;
+    cursor: pointer;
+    //margin-right: 5px;
+
+  }
+
+  &_active {
+    background-color: #000000;
+  }
+}
+
+.slick-dots {
+  .slick-active {
+    background: #000;
+  }
+}

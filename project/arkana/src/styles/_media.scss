@@ -1,0 +1,122 @@
+@import "bourbon";
+
+/*==========  Desktop First Method  ==========*/
+
+/* Large Devices, Wide Screens */
+@media only screen and (max-width : 1200px) {}
+	/**/
+
+
+/* Medium Devices, Desktops */
+@media only screen and (max-width : 992px) {}
+	/**/
+
+
+/* Small Devices, Tablets */
+@media only screen and (max-width : 768px) {
+	/*Disable Animation on Mobile Devices*/
+  .product {
+		min-height: 430px;
+	}
+}
+
+/* Extra Small Devices, Phones */
+@media only screen and (max-width : 480px) {
+
+	.main-menu {
+		flex-direction: column;
+		
+		&__item {
+			flex-basis: 50px;
+			
+		}
+	}
+
+	.header-grid {
+		margin-bottom: 5px;
+	}
+
+	.footer-grid {
+		flex-direction: column;
+		
+		&__col {
+			flex-basis: auto;
+			margin-bottom: 40px;
+		}
+	}
+
+	.banner {
+		flex-direction: column;
+	}
+
+	.product {
+		min-height: 680px;
+
+		&__button {
+			margin-bottom: 5px;
+		}
+	}
+
+	.arrow {
+		width: 26px;
+		height: 26px;
+	}
+
+	.main-nav {
+		margin-bottom: 0;
+	}
+
+	.slider {
+		padding-left: 0;
+		padding-right: 0;
+	}
+
+	
+
+	.map {
+		&__info {
+			display: none;
+		}
+	}
+
+	.product-grid {
+		flex-direction: column;
+	}
+}
+	/**/
+
+
+/* Custom, iPhone Retina */
+@media only screen and (max-width : 320px) {
+	.product {
+		min-height: auto;
+	}
+}
+	/**/
+
+
+/*==========  Mobile First Method  ==========*/
+
+/* Custom, iPhone Retina */
+@media only screen and (min-width : 320px) {}
+	/**/
+
+
+/* Extra Small Devices, Phones */
+@media only screen and (min-width : 480px) {}
+	/**/
+
+
+/* Small Devices, Tablets */
+@media only screen and (min-width : 768px) {}
+	/**/
+
+
+/* Medium Devices, Desktops */
+@media only screen and (min-width : 992px) {}
+	/**/
+
+
+/* Large Devices, Wide Screens */
+@media only screen and (min-width : 1200px) {}
+	/**/

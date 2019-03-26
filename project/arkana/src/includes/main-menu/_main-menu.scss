@@ -1,0 +1,20 @@
+.main-menu {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  
+  &__item {
+    flex-basis: 140px;
+    text-align: center;
+  }
+
+  &__link {
+    font-weight: 600;
+    font-size: 0.6875rem;
+    text-transform: uppercase;
+
+    &:hover {
+      color: #6d6d6d;
+    }
+  }
+}

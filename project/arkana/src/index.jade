@@ -1,0 +1,65 @@
+doctype html
+html(lang='ru')
+
+  head
+    meta(charset='utf-8')
+
+    title Заголовок
+    meta(name='description', content='')
+
+    meta(http-equiv='X-UA-Compatible', content='IE=edge')
+    meta(name='viewport', content='width=device-width, initial-scale=1, maximum-scale=1')
+
+    link(href='styles/fonts.min.css', rel='stylesheet')
+    link(href='styles/main.min.css', rel='stylesheet')
+    link(href="scripts/slick/slick.css" rel="stylesheet" type="text/css")
+
+  body
+    div(class="container-fluid")
+      header(class="header wrap")
+        nav(class="main-nav")
+          div(class="header-grid")
+            div(class="header-grid__item")
+              div(class="inline-container")
+                  include includes/min-menu/_min-menu.jade
+                  include includes/search/_search.jade
+            div(class="header-grid__item")
+              include includes/logo/_logo.jade
+            div(class="header-grid__item")
+              div(class="inline-container inline-container_float-right")
+                include includes/share/_share.jade
+                include includes/basket/_basket.jade
+          include includes/main-menu/_main-menu.jade
+        include includes/slider/_slider.jade
+        //- nav
+        //-   include includes/min-menu/_min-menu.jade
+        //-   include includes/search/_search.jade
+        //-   include includes/logo/_logo.jade
+        //-   include includes/main-menu/_main-menu.jade
+        //-   include includes/share/_share.jade
+        //-   include includes/basket/_basket.jade
+        //-   include includes/slider/_slider.jade
+
+    main(class="main wrap")
+      include includes/advantages/_advantages.jade
+      include includes/themeblock/_themeblock.jade
+      include includes/product/_product.jade
+      include includes/banner/_banner.jade
+      include includes/logo-list/_logo-list.jade
+      include includes/instagram/_instagram.jade
+      include includes/map/_map.jade
+
+    footer(class="footer wrap")
+      div(class="footer-grid")
+        div(class="footer-grid__col")
+          include includes/company/_company.jade
+        div(class="footer-grid__col")
+          include includes/company-products/_company-products.jade
+        div(class="footer-grid__col")
+          include includes/company-info/_company-info.jade
+        div(class="footer-grid__col")
+          include includes/company-your-account/_company-your-account.jade
+
+    script(type="text/javascript" src="scripts/jquery.min.js")
+    script(type="text/javascript" src="scripts/slick/slick.js")
+    script(type="text/javascript" src="scripts/main.js")

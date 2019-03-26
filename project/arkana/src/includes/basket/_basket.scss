@@ -1,0 +1,32 @@
+.basket {
+  &__icon {
+    text-decoration: none;
+    background: transparent url('../images/shape-icon.png') top center no-repeat;
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+    position: relative;
+    margin-right: 8px;
+  }
+
+  &__quantity {
+    display: block;
+    width: 14px;
+    height: 14px;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+    background: #000;
+    color: #fff;
+    font-size: 8px;
+    position: absolute;
+    top: 10px;
+    right: -8px;
+    text-align: center;
+    line-height: 14px;
+    font-weight: 600;
+  }
+
+  &__cart {
+    display: none;
+  }
+}
