@@ -23,30 +23,44 @@
   flex-wrap: wrap;
   justify-content: space-between;
 
+  &:hover {
+    .product-grid__item:not(:hover) {
+      opacity: .4;
+    }   
+  }
+
   &__item {
     //flex-basis: 348px;
     flex-basis: 31.3513%;
     margin-bottom: 12px;
+    transition: opacity .4s ease-in-out;
   }
 }
 
 .product {
   min-height: 555px;
+
   &__header {
     position: relative;
     background-color: #dddddd;
 
+    &::after {
+      position: absolute;
+      content: '';
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, .20);
+      z-index: 5;
+      display: block;
+      top: 0;
+      left: 0;
+      transition: all 1s ease-in-out;
+      opacity: 0;
+    }
+
     &:hover {
       &::after {
-        position: absolute;
-        content: '';
-        width: 100%;
-        height: 100%;
-        background-color: rgba(0, 0, 0, .20);
-        z-index: 5;
-        display: block;
-        top: 0;
-        left: 0;
+        opacity: 1;
       }
     }
   }

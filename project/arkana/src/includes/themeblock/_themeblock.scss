@@ -4,11 +4,20 @@
   justify-content: space-between;
   flex-direction: row;
 
+  &:hover {
+    .themeblock__item {
+      &:not(:hover) {
+        opacity: .4;
+      }
+    } 
+  }
+
   &__item {
     flex-basis: 32%;
     background-color: #dddddd;
     position: relative;
     margin-bottom: 25px;
+    transition: opacity .4s ease-in-out;
     //margin-right: 30px;
 
     &:last-child {
@@ -19,6 +28,7 @@
   &__img {
     // width: 350px;
     // min-height: 378px;
+    cursor: pointer;
     img {
       width: 100%;
       height: auto;
@@ -27,6 +37,7 @@
   }
 
   &__button {
+    cursor: pointer;
     max-width: 251px;
     position: absolute;
     bottom: 5.5076%;
